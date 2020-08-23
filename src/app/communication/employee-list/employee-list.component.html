@@ -1,0 +1,6 @@
+<h4>Employees List</h4>
+<table class="table table-striped">
+  <tr *ngFor="let emp of employees" (click)="selectEmployee(emp)">
+    <td>{{ emp.name }}</td>
+  </tr>
+</table>
