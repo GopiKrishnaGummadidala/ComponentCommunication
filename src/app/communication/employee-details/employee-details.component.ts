@@ -10,19 +10,20 @@ import { ObservableService } from 'src/app/services/observable.service';
   styleUrls: ['./employee-details.component.scss']
 })
 export class EmployeeDetailsComponent implements OnInit {
-  employee: EmployeeModel;
+  @Input() employee: EmployeeModel;
+  // employee: EmployeeModel;
   eventbusSub: Subscription;
   constructor(
     private eventbus: EventBusService,
     private observableService: ObservableService) { }
 
   ngOnInit() {
-    //Example of using an event bus to provide loosely coupled communication (mediator pattern)
-    // this.eventbusSub = this.eventbus.on(Events.EmployeeSelected, emp => (this.employee = emp));
+    // Example of using an event bus to provide loosely coupled communication (mediator pattern)
+    this.eventbusSub = this.eventbus.on(Events.EmployeeSelected, emp => (this.employee = emp));
     
     //Example of using an observable service
-    this.observableService.selectedEmployee$.subscribe(
-      (emp: EmployeeModel) => this.employee = emp);
+    // this.observableService.selectedEmployee$.subscribe(
+    //   (emp: EmployeeModel) => this.employee = emp);
   }
 
 }

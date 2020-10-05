@@ -3,10 +3,10 @@
 
 <div class="">
     <div class="col-md-3">
-        <app-employee-list [employees]="employees"></app-employee-list>
+        <app-employee-list [employees]="employees" (employeeEmiiter)="selected($event)" ></app-employee-list>
     </div>
     <div class="col-md-3">
-        <app-employee-details></app-employee-details>
+        <app-employee-details [employee]="employee"></app-employee-details>
     </div>
 </div>
 

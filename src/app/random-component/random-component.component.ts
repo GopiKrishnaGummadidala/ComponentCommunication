@@ -21,8 +21,8 @@ export class RandomComponentComponent implements OnInit {
     // this.eventbusSub = this.eventbus.on(Events.EmployeeSelected, emp => (this.employee = emp));
 
     //Example of using an observable service
-    this.observableService.selectedEmployee$.subscribe(
-      (emp: EmployeeModel) => this.employee = emp);
+    // this.observableService.selectedEmployee$.subscribe(
+    //   (emp: EmployeeModel) => this.employee = emp);
   }
 
 }
