@@ -20,7 +20,7 @@ export class DataService {
       id: 1,
       name: 'Gopi',
       city: 'hamburg',
-      age: 25
+      age: 29
     },
     {
       id: 2,
